@@ -8,13 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamshaunjp/rest-api-playlist.git"
+    "url": "git+https://github.com/Samet-YAZAR/rest-api-playlist.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/iamshaunjp/rest-api-playlist/issues"
+    "url": "https://github.com/Samet-YAZAR/rest-api-playlist/issues"
   },
-  "homepage": "https://github.com/iamshaunjp/rest-api-playlist#readme"
+  "homepage": "https://github.com/Samet-YAZAR/rest-api-playlist#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
