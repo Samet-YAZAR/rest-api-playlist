@@ -15,9 +15,12 @@ mongoose.connect('mongodb://localhost/nonjago');
 mongoose.Promise= global.Promise;
 
 // puts new Express application inside the app variable
-app.use(bodyParser.json());
-app.use('/api',require('./routers/api'));
-
+app.use(bodyParser.json()); //1st middelware
+app.use('/api',require('./routers/api'));  //2st middelware
+app.use(function(err,req,res,next){ //3st middelware
+  //console.log(err);
+  res.status(422).send({error:err.message}); //message is a property in err object
+});
 
 //listen for request
 app.listen(process.env.port || 4000,function(){
