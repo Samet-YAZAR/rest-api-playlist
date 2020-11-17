@@ -2,12 +2,18 @@ const express = require('express');
 // Requires the Express module just as you require other modules and and puts it in a variable.
 
 const bodyParser = require('body-parser');
-
+const mongoose = require('mongoose');
 //const routes= require('./routes/api'); //First step of our attempt to use routes.
 //app.use('/api',routes); //now all 4 methods is reacable from here.
 
 //set up express app
 const app = express();
+
+
+//connect to mongodb
+mongoose.connect('mongodb://localhost/nonjago');
+mongoose.Promise= global.Promise;
+
 // puts new Express application inside the app variable
 app.use(bodyParser.json());
 app.use('/api',require('./routers/api'));

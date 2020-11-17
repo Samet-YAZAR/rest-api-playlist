@@ -24,3 +24,5 @@ const Ninja = mongoose.model('ninja',NinjaSchema);
 //table shaped by NinjaSchema. And we assigned it to a referance
 module.exports = Ninja;
 //For its reacablity we export it.
+
+//mongoose -> schema -> NinjaSchema -> Ninja(TAble)-> export
