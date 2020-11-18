@@ -2,6 +2,18 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
+const GeoSchema = new Schema ({
+
+  type: {
+    type:String,
+    default: "Point"
+  },
+  coordinate:{
+    type:[Number],
+    index:"2dSphere"
+  }
+});
 //create ninha Schema & model
 const NinjaSchema = new Schema ({
 
@@ -17,6 +29,7 @@ const NinjaSchema = new Schema ({
     default:false
   }
   //add in geo location
+  geometry= GeoSchema
 
 });
 //add collection /like table
