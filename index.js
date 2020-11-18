@@ -14,6 +14,7 @@ const app = express();
 mongoose.connect('mongodb://localhost/nonjago');
 mongoose.Promise= global.Promise;
 
+app.use(express.static('public'));
 // puts new Express application inside the app variable
 app.use(bodyParser.json()); //1st middelware
 app.use('/api',require('./routers/api'));  //2st middelware

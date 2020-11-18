@@ -27,9 +27,9 @@ const NinjaSchema = new Schema ({
   availability: {
     type:Boolean,
     default:false
-  }
+  },
   //add in geo location
-  geometry= GeoSchema
+  geometry : GeoSchema
 
 });
 //add collection /like table
